@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_internet">لا يوجد انترنت</string>
+    <string name="retry">اعد المحاوله</string>
+    <string name="news">الاخبار</string>
+</resources>
