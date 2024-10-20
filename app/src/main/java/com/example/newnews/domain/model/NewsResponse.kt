@@ -11,5 +11,5 @@ data class NewsResponse(
     @SerialName("status")
     val status: String? = null,
     @SerialName("totalResults")
-    val totalResults: Int? = null
+    val totalResults: Int
 )

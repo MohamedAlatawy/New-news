@@ -24,7 +24,7 @@
 
         <argument
             android:name="article"
-            app:argType="com.example.newnews.domain.model.Article"/>
+            app:argType="string"/>
 
     </fragment>
 
