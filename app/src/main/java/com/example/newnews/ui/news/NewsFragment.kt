@@ -35,7 +35,8 @@ class NewsFragment : Fragment(R.layout.fragment_news) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentNewsBinding.bind(view)
 
-        val inflater = requireContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val inflater =
+            requireContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val view: View = inflater.inflate(R.layout.layout_error, null)
         binding.itemHeadlinesError.btnRetry.setOnClickListener {
         }
@@ -49,20 +50,22 @@ class NewsFragment : Fragment(R.layout.fragment_news) {
                         newsAdapter.differ.submitList(newsResponse.articles?.toList())
                         val totalPages = newsResponse.totalResults / PAGE_SIZE + 2
                         isLastPage = viewModel.pageNumber == totalPages
-                        if (isLastPage){
+                        if (isLastPage) {
                             binding.rvNews.setPadding(0, 0, 0, 0)
                         }
                     }
                 }
+
                 is DataState.Error -> {
                     hideProgressBar()
                     showError(response.message.toString())
                 }
+
                 is DataState.Loading -> {
                     showProgressBar()
                 }
             }
-        }
+        })
     }
 
     fun hideProgressBar() {
@@ -120,7 +123,7 @@ class NewsFragment : Fragment(R.layout.fragment_news) {
     }
 
     private fun setUpNewsRV() {
-        newsAdapter = NewsAdapter{
+        newsAdapter = NewsAdapter {
             val bundle = Bundle().apply {
                 putSerializable("article", it.url)
             }
