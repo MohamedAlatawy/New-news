@@ -5,7 +5,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class ArticlesResponse(
+data class NewsResponse(
     @SerialName("articles")
     val articles: List<Article?>? = null,
     @SerialName("status")
