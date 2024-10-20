@@ -3,10 +3,6 @@
     <style name="Base.Theme.NewNews" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <item name="colorPrimary">@color/color_primary</item>
-        <color name="black">#FF000000</color>
-        <color name="white">#FFFFFFFF</color>
-        <color name="purple">#593c8f</color>
-        <color name="yellow">#FFC000</color>
     </style>
 
     <style name="Theme.NewNews" parent="Base.Theme.NewNews" />
