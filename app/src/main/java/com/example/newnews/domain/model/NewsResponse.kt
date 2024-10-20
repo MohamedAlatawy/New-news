@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class NewsResponse(
     @SerialName("articles")
-    val articles: List<Article?>? = null,
+    val articles: MutableList<Article>? = null,
     @SerialName("status")
     val status: String? = null,
     @SerialName("totalResults")
