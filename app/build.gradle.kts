@@ -6,6 +6,7 @@ plugins {
     id("com.google.devtools.ksp")
     id("androidx.navigation.safeargs.kotlin")
     kotlin("plugin.serialization") version "2.0.20"
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -60,11 +61,6 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
     // Architectural Components
     implementation (libs.androidx.lifecycle.lifecycle.viewmodel.ktx)
-    // Room
-    implementation ("androidx.room:room-runtime:2.6.1")
-    ksp ("androidx.room:room-compiler:2.6.1")
-    // Kotlin Extensions and Coroutines support for Room
-    implementation ("androidx.room:room-ktx:2.6.1")
     // Coroutines
     implementation (libs.kotlinx.coroutines.core)
     implementation (libs.kotlinx.coroutines.android)
@@ -81,4 +77,7 @@ dependencies {
     // Glide
     implementation (libs.glide)
     ksp (libs.compiler)
+    //hilt
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.android.compiler)
 }
